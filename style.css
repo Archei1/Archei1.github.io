@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: url("https://uprostim.com/wp-content/uploads/2021/04/image053-46-scaled.jpg");
+    padding: 100px 0;
+}
+
+.container {
+    width: 800px;
+    min-height: 800px;
+    border: 10px solid #fff;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.header {
+    display: flex;
+    height: 150px;
+}
+
+.title-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    background: url("https://plus.unsplash.com/premium_photo-1678566111481-8e275550b700?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=900&q=60") no-repeat center center / cover;
+    color: white;
+    margin-right: 10px;
+}
+
+.userpic {
+    display: flex;
+    height: 97%;
+    width: 20%;
+    border: 2px solid black;
+    background: url("https://images.unsplash.com/photo-1496016943515-7d33598c11e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhhY2tlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=900&q=60") no-repeat center center / cover;
+}
+
+.nav ul {
+    display: flex;
+    background: rgb(230, 230, 230);
+}
+
+.nav ul a {
+    display: flex;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border-right: 1px solid gray;
+    transition: .3s ease;
+}
+
+.nav ul a:hover {
+    background: rgb(196, 196, 196);;
+}
+
+.content-wrapper {
+    display: flex;
+}
+
+.content {
+    width: 60%;
+    padding: 20px;
+}
