@@ -6,6 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Artur Dev</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function goToPortfolio() {
+            window.location.href = "portfolio.html";
+        }
+
+        function goToServices() {
+            window.location.href = "Services.html";
+        }
+    </script>
 </head>
 <body>
 <div class="container">
@@ -17,42 +26,30 @@
     </div>
     <nav class="nav">
         <ul>
-            <li><a href="portfolio.html">Портфолио</a></li>
-            <li><a href="Services.html">Услуги</a></li>
+            <li><a href="#" onclick="goToPortfolio()">Портфолио</a></li>
+            <li><a href="#" onclick="goToServices()">Услуги</a></li>
         </ul>
     </nav>
     <div class="content-wrapper">
         <div class="content">
             <h3>Про меня</h3>
             <p>
-                Меня зовут Рабкин Артур, являюсь студентом РТУ МИРЭА, учусь на втором курсе, на направлении Full-stack разработка, знаю такие языки программирования : C++, Python, JS, Node.js, HTML & CSS.
-                Уверено владею 3-мя операционными системами: Windows, MacOs, Astra Linux.
-                Могу сделать практически любой сайт под ваши нужды
+                Меня зовут Рабкин Артур, являюсь студентом РТУ МИРЭА, учусь на втором курсе, на направлении Full-stack разработка, знаю такие языки программирования: C++, Python, JS, Node.js, HTML & CSS.
+                Уверенно владею тремя операционными системами: Windows, MacOs, Astra Linux.
+                Могу сделать практически любой сайт под ваши нужды.
             </p>
             <h3>Контакты</h3>
             <p>
-                <a href="https://github.com/Archei1" class="contact-link" style="text-decoration: none;">GitHub</a>
+                <a href="https://github.com/Archei1" style="text-decoration: none;">GitHub</a>
             </p>
             <p>
-                <a href="http://t.me/arturrabkin" class="contact-link" style="text-decoration: none;">Telegram</a>
+                <a href="http://t.me/arturrabkin" style="text-decoration: none;">Telegram</a>
             </p>
             <p>
-                <a href="mailto:rabkin03@bk.ru" class="contact-link" style="text-decoration: none;">E-mail: rabkin03@bk.ru</a>
+                <a href="mailto:rabkin03@bk.ru" style="text-decoration: none;">E-mail: rabkin03@bk.ru</a>
             </p>
         </div>
     </div>
 </div>
-
-<script>
-    var contactLinks = document.querySelectorAll('.contact-link');
-
-    contactLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-
-            alert('Вы переходите по ссылке: ' + e.target.href);
-        });
-    });
-</script>
-
 </body>
 </html>
