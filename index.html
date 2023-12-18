@@ -6,6 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Artur Dev</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .footer button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .footer button:disabled {
+            background-color: #ddd;
+            cursor: not-allowed;
+        }
+    </style>
     <script>
         function goToPortfolio() {
             window.location.href = "portfolio.html";
@@ -15,8 +31,12 @@
             window.location.href = "Services.html";
         }
 
-        // Function to increment and display visit count
+        // Function to update and display visit count
         function updateVisitCount() {
+            // Disable the button to prevent multiple clicks
+            var button = document.getElementById("visitButton");
+            button.disabled = true;
+
             var visitCount = localStorage.getItem("visitCount") || 0;
             visitCount = parseInt(visitCount) + 1;
             localStorage.setItem("visitCount", visitCount);
@@ -60,7 +80,7 @@
     </div>
     <div class="footer">
         <!-- Button to update and display visit count -->
-        <button onclick="updateVisitCount()">Обновить счетчик посещений</button>
+        <button id="visitButton" onclick="updateVisitCount()">Обновить счетчик посещений</button>
     </div>
 </div>
 </body>
