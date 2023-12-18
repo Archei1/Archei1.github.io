@@ -14,6 +14,26 @@
         function goToServices() {
             window.location.href = "Services.html";
         }
+
+        // Function to save data to localStorage
+        function saveDataToLocalStorage() {
+            var data = {
+                name: "Artur Rabkin",
+                course: "Full-stack development"
+            };
+            localStorage.setItem("userData", JSON.stringify(data));
+        }
+
+        // Function to retrieve data from localStorage
+        function getDataFromLocalStorage() {
+            var data = localStorage.getItem("userData");
+            if (data) {
+                data = JSON.parse(data);
+                alert("Name: " + data.name + "\nCourse: " + data.course);
+            } else {
+                alert("No data found");
+            }
+        }
     </script>
 </head>
 <body>
@@ -34,19 +54,13 @@
         <div class="content">
             <h3>Про меня</h3>
             <p>
-                Меня зовут Рабкин Артур, являюсь студентом РТУ МИРЭА, учусь на втором курсе, на направлении Full-stack разработка, знаю такие языки программирования: C++, Python, JS, Node.js, HTML & CSS.
-                Уверенно владею тремя операционными системами: Windows, MacOs, Astra Linux.
-                Могу сделать практически любой сайт под ваши нужды.
+                <!-- Call the function to save data to localStorage -->
+                <button onclick="saveDataToLocalStorage()">Save Data</button>
             </p>
             <h3>Контакты</h3>
             <p>
-                <a href="https://github.com/Archei1" style="text-decoration: none;">GitHub</a>
-            </p>
-            <p>
-                <a href="http://t.me/arturrabkin" style="text-decoration: none;">Telegram</a>
-            </p>
-            <p>
-                <a href="mailto:rabkin03@bk.ru" style="text-decoration: none;">E-mail: rabkin03@bk.ru</a>
+                <!-- Call the function to retrieve data from localStorage -->
+                <button onclick="getDataFromLocalStorage()">Get Data</button>
             </p>
         </div>
     </div>
