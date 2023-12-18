@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,24 +15,12 @@
             window.location.href = "Services.html";
         }
 
-        // Function to save data to localStorage
-        function saveDataToLocalStorage() {
-            var data = {
-                name: "Artur Rabkin",
-                course: "Full-stack development"
-            };
-            localStorage.setItem("userData", JSON.stringify(data));
-        }
-
-        // Function to retrieve data from localStorage
-        function getDataFromLocalStorage() {
-            var data = localStorage.getItem("userData");
-            if (data) {
-                data = JSON.parse(data);
-                alert("Name: " + data.name + "\nCourse: " + data.course);
-            } else {
-                alert("No data found");
-            }
+        // Function to increment and display visit count
+        function updateVisitCount() {
+            var visitCount = localStorage.getItem("visitCount") || 0;
+            visitCount = parseInt(visitCount) + 1;
+            localStorage.setItem("visitCount", visitCount);
+            alert("Вы посетили этот сайт " + visitCount + " раз(а).");
         }
     </script>
 </head>
@@ -71,9 +59,8 @@
         </div>
     </div>
     <div class="footer">
-       
-        <button onclick="saveDataToLocalStorage()">Сохранить данные</button>
-        <button onclick="getDataFromLocalStorage()">Получить данные</button>
+        <!-- Button to update and display visit count -->
+        <button onclick="updateVisitCount()">Обновить счетчик посещений</button>
     </div>
 </div>
 </body>
