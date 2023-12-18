@@ -6,6 +6,7 @@
     <style>
         html { height: 100%; }
         body {
+            margin: 0; 
             background: url(https://thypix.com/wp-content/uploads/sad-cat-93.jpg) no-repeat;
             background-size: cover; /* Масштабирует картинку сохраняя пропорции */
         }
@@ -18,20 +19,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100%;
+            height: 100vh; 
             flex-direction: column;
             text-align: center;
-        }
-        .number{
-            font-size: 10em;
             color: #fff;
+        }
+        .number {
+            font-size: 10em;
             position: relative; /* Относительное позиционирование */
             z-index: 2; /* Порядок наложения элемента по высоте */
             margin-bottom: 20px;
         }
         .notfound {
-            text-align: center;
-            color: #fff;
             font-size: 2em;
             position: relative; /* Относительное позиционирование */
             z-index: 2; /* Порядок наложения элемента по слоям в глубину */
@@ -39,10 +38,17 @@
         .notfound a {
             color: #fff;
             font-size: 0.8em;
+            text-decoration: none;
         }
         .notfound a:hover {
             color: yellow;
-            text-decoration: none;
+        }
+
+        
+        @media (max-width: 600px) {
+            .number {
+                font-size: 6em;
+            }
         }
     </style>
 </head>
@@ -50,8 +56,8 @@
 <div class="over"></div>
 <div class="container">
     <div class="number">404 😞</div>
-    <div class="notfound">страница не найдена<br>
-        <a href="index.html">перейти на главную страницу..</a>
+    <div class="notfound">Страница не найдена<br>
+        <a href="index.html">Перейти на главную страницу..</a>
     </div>
 </div>
 </body>
