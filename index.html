@@ -7,105 +7,42 @@
     <title>Artur Dev</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #fff; /* Белый фон */
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            position: relative;
-        }
-
-        .header {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            background-color: #333; /* Цвет фона заголовка */
-            padding: 10px; /* Добавлен отступ */
-        }
-
-        .title-block {
-            margin: 0;
-            padding: 10px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .title-block h1 {
-            margin: 0;
-            font-size: 1.5em;
-            color: #333; /* Цвет текста */
-        }
-
-        .userpic {
-            width: 100px;
-            height: 100px;
-            background-color: #ddd; /* цвет фотографии */
-            border-radius: 50%; /* чтобы сделать круглой */
-            margin-left: 10px;
-        }
-
-        .nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        .nav li {
-            float: left;
-        }
-
-        .nav li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        .nav li a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        .footer button, .nav li a {
+        .footer button {
             padding: 10px 20px;
             font-size: 16px;
             background-color: #4CAF50;
             color: #fff;
             border: none;
-            border-radius: 5px; /* Убрано закругление углов */
+            border-radius: 5px;
             cursor: pointer;
-            margin-right: 10px; /* Добавлено для разделения кнопок в навигации */
         }
 
         .footer button:disabled {
             background-color: #ddd;
             cursor: not-allowed;
         }
-
-        .content-wrapper {
-            margin-top: 20px;
-        }
-
-        .content {
-            /* остальные стили остаются без изменений */
-        }
-
-        .footer {
-            display: flex;
-            justify-content: space-between; /* Перераспределение элементов по горизонтали */
-            align-items: center;
-            background-color: transparent; /* Очищаем фон футера */
-            padding: 10px; /* Добавлен отступ */
-        }
     </style>
-    <!-- остальной код остается без изменений -->
+    <script>
+        function goToPortfolio() {
+            window.location.href = "portfolio.html";
+        }
+
+        function goToServices() {
+            window.location.href = "Services.html";
+        }
+
+        // Function to update and display visit count
+        function updateVisitCount() {
+            // Disable the button to prevent multiple clicks
+            var button = document.getElementById("visitButton");
+            button.disabled = true;
+
+            var visitCount = localStorage.getItem("visitCount") || 0;
+            visitCount = parseInt(visitCount) + 1;
+            localStorage.setItem("visitCount", visitCount);
+            alert("Вы посетили этот сайт " + visitCount + " раз(а).");
+        }
+    </script>
 </head>
 <body>
 <div class="container">
@@ -142,9 +79,6 @@
         </div>
     </div>
     <div class="footer">
-        <div class="title-block">
-            <h1>Front-end Developer Artur</h1>
-        </div>
         <!-- Button to update and display visit count -->
         <button id="visitButton" onclick="updateVisitCount()">Обновить счетчик посещений</button>
     </div>
