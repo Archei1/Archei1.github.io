@@ -7,7 +7,32 @@
     <title>Artur Dev</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .footer button {
+        .nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .nav li {
+            float: left;
+        }
+
+        .nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .nav li a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .footer button, .nav li a {
             padding: 10px 20px;
             font-size: 16px;
             background-color: #4CAF50;
@@ -15,6 +40,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin-right: 10px; /* Добавлено для разделения кнопок в навигации */
         }
 
         .footer button:disabled {
