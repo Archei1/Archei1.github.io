@@ -37,6 +37,7 @@
         .title-block h1 {
             margin: 0;
             font-size: 1.5em;
+            color: #333; /* Цвет текста */
         }
 
         .userpic {
@@ -78,7 +79,7 @@
             background-color: #4CAF50;
             color: #fff;
             border: none;
-            border-radius: 5px;
+            border-radius: 5px; /* Убрано закругление углов */
             cursor: pointer;
             margin-right: 10px; /* Добавлено для разделения кнопок в навигации */
         }
@@ -98,7 +99,7 @@
 
         .footer {
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-between; /* Перераспределение элементов по горизонтали */
             align-items: center;
             background-color: transparent; /* Очищаем фон футера */
             padding: 10px; /* Добавлен отступ */
@@ -141,7 +142,9 @@
         </div>
     </div>
     <div class="footer">
-        <h1>Front-end Developer Artur</h1>
+        <div class="title-block">
+            <h1>Front-end Developer Artur</h1>
+        </div>
         <!-- Button to update and display visit count -->
         <button id="visitButton" onclick="updateVisitCount()">Обновить счетчик посещений</button>
     </div>
